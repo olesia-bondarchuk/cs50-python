@@ -32,7 +32,7 @@ jobs:
       run: |
     - name: Analysing the code with pylint
       run: |
-        pylint $(git ls-files '*.py')
+        pylint --fail-under=6.5  $(git ls-files '*.py')
     - name: Test with pytest
       run: |
         pytest

@@ -4,5 +4,3 @@ y = float(input("What`s y? "))
 z = round(x + y)
 
 print(f"{z:,}")
-
-
