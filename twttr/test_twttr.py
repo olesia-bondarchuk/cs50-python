@@ -1,4 +1,3 @@
-from xmlrpc.client import ResponseError
 from twttr import shorten
 
 def test_shorten_empty_string_throws_value_error():
@@ -20,7 +19,7 @@ def test_shorten_none_throws_value_error():
 def test_shorten_empty_result_throws_response_error():
     try:
         shorten("aoiue")
-    except ResponseError:
+    except ValueError:
         return 
 
     raise AssertionError("ResponseError was expected")

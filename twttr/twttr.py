@@ -1,4 +1,3 @@
-from xmlrpc.client import ResponseError
 from sqlalchemy import null
 
 
@@ -19,7 +18,7 @@ def shorten(word):
             output += c
     
     if output == "":
-        raise ResponseError("Result cannot be empty.")
+        raise ValueError("Result cannot be empty.")
 
     return output
 
